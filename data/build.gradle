@@ -3,8 +3,6 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 26
 
-
-
     defaultConfig {
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
@@ -29,6 +27,12 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:' + project.ext.rxJavaVersion
     implementation 'io.reactivex.rxjava2:rxandroid:' + project.ext.rxAndroidVersion
 
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    compile 'com.google.code.gson:gson:2.7'
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
